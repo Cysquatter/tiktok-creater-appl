@@ -38,14 +38,14 @@ export const handler = async (event, context) => {
             };
         }
 
-        const { username, email, 'full-name': fullName, dob, details, interests } = body;
+        const { username, email, 'full-name': fullName, dob, details, interests, form_submit_ip, consent } = body;
 
-        if (!username || !email || !fullName || !dob) {
-            console.error('Missing required fields:', { username, email, fullName, dob });
+        if (!username || !email || !fullName || !dob || !consent) {
+            console.error('Missing required fields:', { username, email, fullName, dob, consent });
             return {
                 statusCode: 400,
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ error: 'Missing required fields.' }),
+                body: JSON.stringify({ error: 'Missing required fields, including consent.' }),
             };
         }
 
@@ -65,8 +65,8 @@ export const handler = async (event, context) => {
         try {
             console.log('Attempting database insert');
             await sql`
-                INSERT INTO public.submissions (username, email, full_name, dob, details, interests, submitted_at)
-                VALUES (${username}, ${email}, ${fullName}, ${dob}, ${details}, ${interests}, NOW())
+                INSERT INTO public.submissions (username, email, full_name, dob, details, interests, form_submit_ip, submitted_at)
+                VALUES (${username}, ${email}, ${fullName}, ${dob}, ${details}, ${interests}, ${form_submit_ip}, NOW())
             `;
             console.log('Database insert successful');
         } catch (queryError) {
