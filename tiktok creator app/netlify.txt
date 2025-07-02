@@ -1,4 +1,0 @@
-[build]
-  command = "npm install && echo 'No build command required for static site'"
-  publish = "."
-  functions = "netlify/functions"
