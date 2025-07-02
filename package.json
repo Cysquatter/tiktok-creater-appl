@@ -1,0 +1,12 @@
+{
+  "name": "tiktok-creator-academy-form",
+  "version": "1.0.0",
+  "description": "A registration form for TikTok Creator Academy simulation",
+  "main": "index.html",
+  "scripts": {
+    "start": "echo 'This is a static site for Netlify; no backend required.'"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^0.6.0"
+  }
+}
