@@ -23,7 +23,8 @@ body {
 .logo {
     display: block;
     margin: 0 auto 1rem;
-    max-width: 150px;
+    width: 120px;
+    height: auto;
 }
 
 h1 {
