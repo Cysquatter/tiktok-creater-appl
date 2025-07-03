@@ -23,7 +23,7 @@ body {
 .logo {
     display: block;
     margin: 0 auto 1rem;
-    width: 120px;
+    width: 32px; /* Favicon size */
     height: auto;
 }
 
