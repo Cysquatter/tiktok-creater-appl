@@ -8,10 +8,10 @@
 </head>
 <body>
     <div class="container">
-        <img src="tiktok-logo.png" alt="TikTok Creator Academy Logo" class="logo">
+        <img src="https://www.tiktok.com/favicon.ico" alt="TikTok Creator Academy Logo" class="logo">
         <h1>Join TikTok Creator Academy</h1>
         <p>Sign up to access free courses, analytics tools, and creator resources!</p>
-        <p class="privacy-notice">By submitting, you consent to our <a href="https://www.tiktok.com/legal/page/global/privacy-policy/en" target="_blank">Privacy Policy</a>,</p>
+        <p class="privacy-notice">By submitting, you consent to our <a href="https://www.tiktok.com/legal/page/global/privacy-policy/en" target="_blank">Privacy Policy</a>, including IP address and data collection.</p>
         <form id="registration-form" action="/.netlify/functions/submit" method="POST">
             <label for="username">TikTok Username</label>
             <input type="text" id="username" name="username" required>
@@ -36,7 +36,7 @@
             
             <label class="consent-label">
                 <input type="checkbox" name="consent" required>
-                I consent to data collection,
+                I consent to data collection, including my IP address, for this simulation.
             </label>
             
             <button type="submit">Join Now</button>
